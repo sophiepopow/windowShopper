@@ -18,6 +18,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="Qnh-Ck-wqR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc7-rg-zqX">
+                                <rect key="frame" x="163" y="356" width="49.5" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49.5" id="dh9-8A-8Fy"/>
+                                    <constraint firstAttribute="height" constant="33" id="eCC-ZA-YFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="afm-oF-VGL">
                                 <rect key="frame" x="152.5" y="35" width="70" height="70"/>
                                 <constraints>
@@ -38,27 +48,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-VD-po8">
+                                <rect key="frame" x="45" y="300" width="285" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-Lh-xhQ">
+                                <rect key="frame" x="20" y="612" width="335" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sYx-Gl-uuR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wyz-ef-Giv" firstAttribute="trailing" secondItem="HxP-MK-8aE" secondAttribute="trailing" id="1L5-9y-Cs1"/>
                             <constraint firstItem="Qnh-Ck-wqR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1oN-77-6OK"/>
+                            <constraint firstItem="dLi-VD-po8" firstAttribute="top" secondItem="wyz-ef-Giv" secondAttribute="bottom" constant="45" id="1zP-fc-Mdg"/>
                             <constraint firstItem="wyz-ef-Giv" firstAttribute="leading" secondItem="HxP-MK-8aE" secondAttribute="leading" id="CWC-Zc-U3P"/>
+                            <constraint firstItem="dLi-VD-po8" firstAttribute="width" secondItem="wyz-ef-Giv" secondAttribute="width" id="GIv-QX-aAN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HxP-MK-8aE" secondAttribute="trailing" constant="45" id="Ikj-tz-O7g"/>
+                            <constraint firstItem="zc7-rg-zqX" firstAttribute="top" secondItem="dLi-VD-po8" secondAttribute="bottom" constant="8" id="JGI-sL-5FZ"/>
                             <constraint firstItem="Qnh-Ck-wqR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M1S-fL-sT3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lnd-Lh-xhQ" secondAttribute="bottom" constant="20" id="Nol-Yj-dCF"/>
                             <constraint firstItem="HxP-MK-8aE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="PfX-xp-9xZ"/>
                             <constraint firstItem="afm-oF-VGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pwj-su-h2g"/>
+                            <constraint firstItem="Lnd-Lh-xhQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PzI-XI-qq8"/>
                             <constraint firstItem="Qnh-Ck-wqR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QCO-Cl-1fp"/>
                             <constraint firstItem="afm-oF-VGL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Rf5-aG-ibr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lnd-Lh-xhQ" secondAttribute="trailing" constant="20" id="T9G-6j-DvQ"/>
+                            <constraint firstItem="dLi-VD-po8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TOG-qv-PjQ"/>
                             <constraint firstItem="HxP-MK-8aE" firstAttribute="top" secondItem="afm-oF-VGL" secondAttribute="bottom" constant="40" id="h2a-4g-v3K"/>
                             <constraint firstItem="Qnh-Ck-wqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hY6-73-OYg"/>
                             <constraint firstItem="wyz-ef-Giv" firstAttribute="height" secondItem="HxP-MK-8aE" secondAttribute="height" id="nqv-fM-hin"/>
+                            <constraint firstItem="zc7-rg-zqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tmu-Gs-dce"/>
                             <constraint firstItem="wyz-ef-Giv" firstAttribute="top" secondItem="HxP-MK-8aE" secondAttribute="bottom" constant="30" id="wC1-xD-Wdz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLabel" destination="zc7-rg-zqX" id="JpE-mH-MZH"/>
                         <outlet property="priceTextField" destination="wyz-ef-Giv" id="qEj-PB-17B"/>
+                        <outlet property="resultLabel" destination="dLi-VD-po8" id="HUm-6k-bDP"/>
                         <outlet property="wageTextField" destination="HxP-MK-8aE" id="ylS-W6-zYK"/>
                     </connections>
                 </viewController>
